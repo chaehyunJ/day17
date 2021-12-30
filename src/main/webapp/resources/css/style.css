@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+table>tbody>tr:first-child {
+	background-color: black;
+	color: white;
+}
+
+table>tbody>tr:hover {
+	background-color: #dadada;
+}
+
+table>tbody>tr:last-child {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+table>tbody>tr:nth-child(9)>td:nth-child(3) {
+	color: red;
+	background-color: white;
+	font-weight: bolder;
+}
+
+table>tbody>tr:last-child>td:nth-child(1) {
+	color: white;
+	background-color: black;
+}
