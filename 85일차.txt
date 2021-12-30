@@ -1,0 +1,40 @@
+85일차 
+http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?
+	serviceKey=q6WAnLS1b6vUa9VoLCKmB14TY6kJ3AotCfHj10BgvLRuyQTk6nnlrOruwjHTWL9K8XZ%2B8L6Ic26%2BDJdRsSzOTw%3D%3D&
+	pageNo=1&
+	numOfRows=10&
+	startCreateDt=20200410&
+	endCreateDt=20200410
+
+url + queryString(key=value&key=value&key=value&..)
+
+
+라이브러리
+
+org.json
+-> xml을 json으로 변환
+
+cors로 막히면 java로 호출하면 된다
+===================================
+
+UI/스토리 보드 수정 내용
+
+1.
+main 페이지에서 로그인 누르면 로그인 페이지를 띄워주고
+main 페이지에서 비로그인 상태에서 주문하기를 누르면 모달창 띄우기
+
+2. 
+주문하기를 누르면 모달창을 띄워서 회원인지 비회원인지 구분해서 이동시키기
+
+Board => 공지사항, QnA(매장관련, 사이트관련)
+
+QnA 자체에서 매장에 대한 질문인지 사이트 관리자에게 하는 질문인지 판단 -> 카테고리 -> 대 중 소
+
+-> 관리자에 대한 질문은 공개로 보여지고, 매장에 대한 질문은 비공개로 처리한다
+
+관리자 등급에 따라 특정 페이지 접근 (인터셉터로 해보기)
+
+매장관리자 접속하면 해당 매장 QnA만 받을 수 있도록 처리
+
+고객도 등급에 따라 주문 
+
